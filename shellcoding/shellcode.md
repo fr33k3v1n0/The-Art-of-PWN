@@ -24,6 +24,8 @@ i will show you free way to write shellcode.
 
 1 - #   write your program i C langage, compile it and  get the shellcode
 
+
+
 2-  #    write your  shellcode in assembled langage, compile it
 
 3 - #    use automate tool to write your shellcode. 
@@ -32,6 +34,7 @@ i will show you free way to write shellcode.
 
 # FROM C program to shellcode.
  I dont recommanded this methodology . because it make you very limited and in some case, you can not use it
+
 how to do that.
     i suppose you know C programming Langage.
     - write your code in C program. 
