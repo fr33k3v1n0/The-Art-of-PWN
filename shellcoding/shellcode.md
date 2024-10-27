@@ -23,6 +23,7 @@ it take time to become skilled in this field. it need many pratice. undertand as
 i will show you free way to write shellcode.
 
 1 - #   write your program i C langage, compile it and  get the shellcode
+
 2-  #    write your  shellcode in assembled langage, compile it
 
 3 - #    use automate tool to write your shellcode. 
@@ -45,8 +46,11 @@ execve("/bin/sh", NULL, NULL)
 return 0;
 }
 ```
-compile the program: `` gcc -nostartfiles -o bin_sh bin_sh.c``
+compile the program: 
+`` gcc -nostartfiles -o bin_sh bin_sh.c``
+
 you can decompile the program with objdump to  get the assembled code of main function
+
 ``objdump -d -M intel bin_sh``
 
 ![C_program_2_shellcode](../images/bin_sh_c.png)
@@ -58,6 +62,7 @@ you can decompile the program with objdump to  get the assembled code of main fu
 to do that, i will use objcopy. a tool  to inspect, modify ELF file
 
 cmd: ``objcopy --dump-section .text=raw_shellcode.txt bin_sh``
+
 this will produce raw_shellcode.txt file containing your shellcode in raw format
 
 ![C_program_2_shellcode](../images/raw_shellcode.png)
