@@ -167,4 +167,5 @@ msfvenom
 
 ``pwn shellcraft sh -f raw  -o my_shell.raw``
 
-
+# follow me on x.com:
+@Fr33K3vin
