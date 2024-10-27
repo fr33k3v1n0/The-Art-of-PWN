@@ -44,7 +44,22 @@ execve("/bin/sh", NULL, NULL)
 return 0;
 }
 ```
+compile the program: `` gcc -nostartfiles -o bin_sh bin_sh.c``
+you can decompile the program with objdump to  get the assembled code of main function
+``objdump -d -M intel bin_sh``
+
 ![C_program_2_shellcode](../images/bin_sh_c.png)
+![C_program_2_shellcode](../images/objdump_result1.png)
 
 
 # 
+# time to  get the shellcode of this elf file:
+to do that, i will use objcopy. a tool  to inspect, modify ELF file
+
+cmd: ``objcopy --dump-section .text=raw_shellcode.txt bin_sh``
+this will produce raw_shellcode.txt file containing your shellcode in raw format
+
+![C_program_2_shellcode](../images/raw_shellcode.png)
+
+in the next article, i will show you how to test your shellcode
+
