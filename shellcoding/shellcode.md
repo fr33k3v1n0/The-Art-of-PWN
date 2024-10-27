@@ -44,7 +44,7 @@ execve("/bin/sh", NULL, NULL)
 return 0;
 }
 ```
-![][../images/bin_sh_c.png]
+![C_program_2_shellcode](../images/bin_sh_c.png)
 
 
 # 
