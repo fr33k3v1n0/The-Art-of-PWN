@@ -43,8 +43,8 @@ in main(){
 execve("/bin/sh", NULL, NULL)
 return 0;
 }
-
-!["bin sh from c"][../images/bin_sh_c.png]
 ```
+!["bin sh from c"][../images/bin_sh_c.png]
+
 
 # 
