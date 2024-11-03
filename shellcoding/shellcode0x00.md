@@ -18,11 +18,11 @@ imagine an instance where you get acces to a remote machine,you dont have permis
 # how to write a shellcdoe:::
 there is many way to write a shellcode. It is an art and you master it as long as you make pratice.
 the purpose of this cours is to help reader become shellcoders.
-it take time to become skilled in this field. it need many pratice. undertand assambled language is mandatory 
+it take time to become skilled in this field. it need many pratice. undertande assambled language is mandatory 
 
 i will show you free way to write shellcode.
 
-1 - #   write your program i C langage, compile it and  get the shellcode
+1 - #   write your program in C langage, compile it and  get the shellcode
 
 
 
@@ -36,10 +36,15 @@ i will show you free way to write shellcode.
  I dont recommanded this methodology . because it make you very limited and in some case, you can not use it
 
 how to do that.
+
     i suppose you know C programming Langage.
+
     - write your code in C program. 
+
     - compile your code
+
     - from the binary code, extract your shellcode
+
 
 Example:
   /bin/sh shellcode
@@ -81,12 +86,19 @@ in order to do that, you need a good knowledgment of assembler langague.
 if want to write shellcode for x86/amd, you must know those assembleur langage.
 
 ## Step:
+
 1 - write your shellcode in assembler
+
 2 -compile it to elf file
+
 3 - test if the result elf file work as expect(do the job)
+
 4 - extraction your shellcode from the elf file
+
 5 - test your shellcode.
+
 6 - exploit the program by injecting your shellcode.
+
 
 
 # let do an example:
@@ -111,7 +123,7 @@ _start:
 
 ```
 
-#NB : don't worry if you don't know how this code your, in the  following articles, we will learn all of them
+#NB : don't worry if you don't know how this code work, in the  following articles, we will learn all of them
 
 2 - # compile your shellcode:
 cmd: ``gcc -nostdlib --static -o shell_elf shellcode.s``
@@ -134,7 +146,9 @@ After that, you obtain  the shell_elf file and you can test it to see if it work
     let decompile the file to see its asm code
 cmd: ``objdump -d -M intel shell_elf``
  explaination: 
+
         -d : to decompile executable sections
+
         -M : asm syntax in which you want the result
 
 ![C_program_2_shellcode](../images/objdump_result2.png)
@@ -163,7 +177,9 @@ in some situation, those automate tools will not produce the correct result. so 
 
 to do that, you can use:
 - pwn tool
+
 msfvenom
+
 
 ``pwn shellcraft sh -f raw  -o my_shell.raw``
 
